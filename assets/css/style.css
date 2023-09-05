@@ -1,0 +1,105 @@
+*:focus{
+    outline: none;
+}
+
+#title{
+    text-align: center;
+}
+
+#main-container{
+    width: 75vw;
+    border: 2px solid black;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+#description{
+    min-width: 95%;
+    max-width: 95%;
+    min-height: 40px;
+    max-height: 40px;
+    margin-left: 2.5%;
+    margin-top: 20px;
+    resize: none;
+    border:none;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+
+#flex-box-form{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin: auto;
+    height: 60px;
+    margin-bottom: 40px;
+    border-bottom: 0.5px solid black;
+}
+
+#date{
+    height: 100%;
+    width: 50%;
+    border: none;
+}
+
+#category{
+    height: 100%;
+    width: 50%;
+    border: none;
+    padding-bottom: 20px;
+    border-right: 1px solid black;
+}
+
+#buttons-container{
+    display:flex;
+    justify-content: center;
+}
+
+#delete,#submit{
+    height: 40px;
+    width: 120px;
+    margin: 0 5px;
+    color: white;
+    border: none;
+}
+
+#submit{
+    background-color: rgb(0, 132, 255);
+}
+
+#delete{
+    background-color: red;
+}
+
+.task-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid black;
+    width: 95%;
+    margin: auto;
+}
+
+.task-container-left{
+    display: flex;
+    align-items: center;
+}
+
+.task-container-left>div>p{
+    margin: 5px 0;
+    padding-left: 10px;
+}
+
+.task-container-right{
+    margin-right: 30px;
+    width: 75px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: red;
+    color: white;
+}
+
+
