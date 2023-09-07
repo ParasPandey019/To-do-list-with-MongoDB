@@ -7,18 +7,18 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <div id="title-container">
-        <h1 id="title"><%= title %></h1>
-    </div>
     <div id="main-container">
+        <div id="title-container">
+            <h1 id="title"><%= title %></h1>
+        </div>
         <form action="/add-to-list" method="POST">
             <div id="description-container">
-                <label for="description" style="display: block;">Description</label>
+                <label for="description" style="display: block;">DESCRIPTION</label>
                 <textarea placeholder="Write your description" id="description" name="description" required></textarea>
             </div>
             <div id="flex-box-form" required>
                 <div id="category-container">
-                    <label for="category" style="display: block; margin-left: 10px;">Category</label>
+                    <label for="category" style="display: block; margin-left: 10px;">CATEGORY</label>
                     <select id="category" name="category">
                         <option value="" disabled selected>Choose a category</option>
                         <option value="Personal">Personal</option>
@@ -29,7 +29,7 @@
                     </select>
                 </div>
                 <div id="date-container">
-                    <label for="date" style="display: block">Due date</label>
+                    <label for="date" style="display: block">DUE DATE</label>
                     <input placeholder="select due date" id="date" type="date" name="date" required>
                 </div>
             </div>

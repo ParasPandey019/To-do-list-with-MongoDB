@@ -1,3 +1,4 @@
+// arr that will contain the ids of checked tasks when delete button is clicked
 const idArr = [];
 
 const checkboxes = document.getElementsByClassName("checkboxes");
@@ -13,10 +14,10 @@ function checkList(){
         }
     }
     if(idArr.length !== 0){
-        const queryString = `/delete-tasks/?ids=${idArr.join(',')}`;
+        const queryString = `/delete-tasks/?ids=${idArr.join(',')}`; // converting array elements to string to send as query parameter
         deleteLink.href = queryString;
     }else{
-        alert("Select something from the list");
+        alert("Select something from the list"); //if nothing is selected then do nothing and pop an alert
         deleteLink.href = `#`;
     }
     idArr.splice(0,idArr.length);

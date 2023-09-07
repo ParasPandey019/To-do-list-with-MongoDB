@@ -6,8 +6,13 @@ const app = express();
 const db = require("./config/mongoose.js");
 const List = require("./models/list.js");
 
+// setting view engine to ejs
 app.set('view engine', 'ejs');
+
+// setting view directory
 app.set('views', './views');
+
+// setting static files directory
 app.use(express.static('./assets'));
 app.use(express.urlencoded());
 
@@ -36,7 +41,7 @@ app.get("/", async function(req, res){
 })
 
 
-
+// adding task to the databse
 app.post("/add-to-list", async function(req,res){
     const dateArr = req.body.date.split('-');
     req.body.date = `${dateArr[2]}-${dateArr[1]}-${dateArr[0]}`;
@@ -51,6 +56,7 @@ app.post("/add-to-list", async function(req,res){
 })
 
 
+// deleting selected tasks to the database
 app.get("/delete-tasks", async function(req, res){
     const checkedIds = req.query.ids.split(',');
     for(let id of checkedIds){
