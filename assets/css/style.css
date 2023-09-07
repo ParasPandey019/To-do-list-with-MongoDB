@@ -70,9 +70,9 @@ body{
 }
 
 #date{
-    width: 100%;
     border: none;
     margin-top: 10px;
+    cursor: pointer;
 }
 
 #category-container{
@@ -87,6 +87,7 @@ body{
     border: none;
     width: 100%;
     margin-top: 10px;
+    cursor: pointer;
 }
 
 .buttons-container{
@@ -140,7 +141,7 @@ span>img{
     align-items: center;
     justify-content: space-between;
     padding: 10px 0;
-    border-bottom: 1px solid black;
+    border-top: 1px solid black;
     width: 95%;
     margin: auto;
 }

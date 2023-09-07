@@ -3,6 +3,7 @@ const idArr = [];
 
 const checkboxes = document.getElementsByClassName("checkboxes");
 const deleteLink = document.getElementById("delete-link");
+const dateElem = document.getElementById("date");
 
 function checkList(){
     deleteLink.href = "";
@@ -22,3 +23,12 @@ function checkList(){
     }
     idArr.splice(0,idArr.length);
 }
+
+// function to set min allowed date the current date
+function setMinDate(){
+    const today = new Date().toISOString().split('T')[0];
+    dateElem.value = today;
+    dateElem.min = today;
+}
+
+setMinDate();
