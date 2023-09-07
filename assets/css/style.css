@@ -2,8 +2,15 @@
     outline: none;
 }
 
+#description:focus{
+    background-color: rgba(219, 216, 216,0.5);
+}
+
+
 #title{
     text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #main-container{
@@ -13,63 +20,110 @@
     padding-bottom: 20px;
 }
 
-#description{
+#description-container{
     min-width: 95%;
     max-width: 95%;
-    min-height: 40px;
-    max-height: 40px;
+    min-height: 50px;
+    max-height: 50px;
     margin-left: 2.5%;
     margin-top: 20px;
-    resize: none;
-    border:none;
     padding-bottom: 20px;
     border-bottom: 1px solid black;
     border-top: 1px solid black;
 }
 
+#description{
+    height: 80%;
+    width:80%;
+    resize: none;
+    border:none;
+    margin-top: 10px;
+}
+
 #flex-box-form{
     display: flex;
     justify-content: space-between;
+    align-items:center;
     width: 95%;
     margin: auto;
-    height: 60px;
-    margin-bottom: 40px;
+    height: 70px;
+    margin-bottom: 20px;
     border-bottom: 0.5px solid black;
 }
 
+#date-container{
+    height: 100%;
+    width: 49%;
+    border: none;
+    padding-left: 1%;
+    box-sizing: border-box;
+    padding-top: 10px;
+}
+
 #date{
+    width: 100%;
+    border: none;
+    margin-top: 10px;
+}
+
+#category-container{
     height: 100%;
     width: 50%;
-    border: none;
+    border-right: 1px solid black;
+    box-sizing: border-box;
+    padding-top: 10px;
 }
 
 #category{
-    height: 100%;
-    width: 50%;
     border: none;
-    padding-bottom: 20px;
-    border-right: 1px solid black;
+    width: 100%;
+    margin-top: 10px;
 }
 
-#buttons-container{
+.buttons-container{
     display:flex;
     justify-content: center;
+    width: 95%;
+    margin: auto;
+}
+
+.buttons-container:nth-child(2){
+    border-bottom: 1px solid black;
 }
 
 #delete,#submit{
     height: 40px;
-    width: 120px;
+    width: 150px;
     margin: 0 5px;
     color: white;
     border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 #submit{
     background-color: rgb(0, 132, 255);
 }
 
+#delete-link{
+    text-decoration: none;
+}
+
 #delete{
     background-color: red;
+}
+
+span>img{
+    height: 20px;
+}
+
+#taskList{
+    max-height: 300px;
+    overflow: auto;
+    min-height: 300px;
 }
 
 .task-container{
@@ -92,14 +146,39 @@
     padding-left: 10px;
 }
 
+.list-date{
+    display:flex;
+    align-items:center;
+    color: gray;
+}
+
 .task-container-right{
     margin-right: 30px;
     width: 75px;
     height: 40px;
     line-height: 40px;
     text-align: center;
-    background-color: red;
     color: white;
+}
+
+#School{
+    background-color: purple;
+}
+
+#Personal{
+    background-color: Green;
+}
+
+#Cleaning{
+    background-color: blueviolet
+}
+
+#Work{
+    background-color: Black;
+}
+
+#Other{
+    background-color: rgb(64, 63, 63);
 }
 
 

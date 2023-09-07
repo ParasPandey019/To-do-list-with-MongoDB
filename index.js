@@ -29,7 +29,7 @@ app.get("/", async function(req, res){
     const list = await List.find({});
     // console.log(list);
     return res.render('home',{
-        title: "To-do List",
+        title: "TO-DO LIST",
         task_list: list,
     });
    
@@ -38,6 +38,8 @@ app.get("/", async function(req, res){
 
 
 app.post("/add-to-list", async function(req,res){
+    const dateArr = req.body.date.split('-');
+    req.body.date = `${dateArr[2]}-${dateArr[1]}-${dateArr[0]}`;
     const task = await  List.create({
         description: req.body.description,
         category: req.body.category,

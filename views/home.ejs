@@ -7,27 +7,41 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <h1 id="title"><%= title %></h1>
+    <div id="title-container">
+        <h1 id="title"><%= title %></h1>
+    </div>
     <div id="main-container">
         <form action="/add-to-list" method="POST">
-            <textarea placeholder="Write your description" id="description" name="description"></textarea>
-            <div id="flex-box-form">
-                <select id="category" name="category">
-                    <option value="Personal">Personal</option>
-                    <option value="Work">Work</option>
-                    <option value="School">School</option>
-                    <option value="Cleaning">Cleaning</option>
-                    <option value="Other">Other</option>
-                </select>
-                <input id="date" type="date" name="date">
+            <div id="description-container">
+                <label for="description" style="display: block;">Description</label>
+                <textarea placeholder="Write your description" id="description" name="description" required></textarea>
             </div>
-            <div id="buttons-container">
-                <button type="submit" id="submit">Add To List</button>
+            <div id="flex-box-form" required>
+                <div id="category-container">
+                    <label for="category" style="display: block; margin-left: 10px;">Category</label>
+                    <select id="category" name="category">
+                        <option value="" disabled selected>Choose a category</option>
+                        <option value="Personal">Personal</option>
+                        <option value="Work">Work</option>
+                        <option value="School">School</option>
+                        <option value="Cleaning">Cleaning</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div id="date-container">
+                    <label for="date" style="display: block">Due date</label>
+                    <input placeholder="select due date" id="date" type="date" name="date" required>
+                </div>
+            </div>
+            <div class="buttons-container">
+                <button type="submit" id="submit"><span><img src="/images/plus.png"></span>ADD TASK</button>
             </div>    
         </form>
-        <a href="" id="delete-link" onclick="checkList()">
-            <button type="button" id="delete">Delete</button>
-        </a> 
+        <div class="buttons-container">
+            <a href="" id="delete-link" onclick="checkList()">
+                <button type="button" id="delete"><span><img src="/images/delete.png"></span>DELETE TASKS</button>
+            </a> 
+        </div>
         <div id="taskList">
             <% for(let i of task_list){ %>
                     <div class="task-container">
@@ -35,10 +49,10 @@
                             <input class="checkboxes" type="checkbox" value=<%= i._id%>></input>
                             <div>
                                 <p> <%= i.description %> </p>
-                                <p> <%= i.date %> </p>
+                                <p class="list-date"><img src="/images/calender.png" width="20px;"><span><%= i.date %></span></p>
                             </div>
                         </div>
-                        <p class="task-container-right"> <%= i.category %> </p>
+                        <p class="task-container-right" id=<%= i.category%> > <%= i.category %> </p>
                     </div>
             <% } %>
         </div>

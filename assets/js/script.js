@@ -12,7 +12,12 @@ function checkList(){
             }
         }
     }
-    const queryString = `/delete-tasks/?ids=${idArr.join(',')}`;
-    deleteLink.href = queryString;
+    if(idArr.length !== 0){
+        const queryString = `/delete-tasks/?ids=${idArr.join(',')}`;
+        deleteLink.href = queryString;
+    }else{
+        alert("Select something from the list");
+        deleteLink.href = `#`;
+    }
     idArr.splice(0,idArr.length);
 }
